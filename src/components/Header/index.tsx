@@ -1,5 +1,5 @@
 import React from "react";
-
+import pokeball from "../../assets/pokeball.png"
 import {
   FormArea,
   Input,
@@ -12,15 +12,15 @@ import {
 const SearchBar: React.FC = () => {
   return (
     <>
-      <Part01></Part01>
+      <Part01> ArpiaMon </Part01>
       <Part02>
         <FormArea>
           <SearchIcon />
-          <Input autoFocus type="text" placeholder="Seach downloads" />
+          <Input autoFocus type="text" placeholder="Search Pokemon" />
         </FormArea>
       </Part02>
       <Part03>
-      
+      <img src = {pokeball}></img>
       </Part03>
     </>
   );

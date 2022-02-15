@@ -8,6 +8,7 @@ export const Part01 = styled.div`
   color: var(--search-area-color);
   align-items: center;
   padding-left: 24px;
+  border-bottom: 1px solid var(--THEME_COLOR_003);
 `;
 
 export const Part02 = styled.div`
@@ -16,6 +17,7 @@ export const Part02 = styled.div`
   background: var(--search-area-background);
   color: var(--search-area-color);
   align-items: center;
+  border-bottom: 1px solid var(--THEME_COLOR_003);
 `;
 
 export const FormArea = styled.form`
@@ -46,6 +48,10 @@ export const Part03 = styled.div`
   align-items: center;
   justify-content: flex-end;
   padding-right: 24px;
+  border-bottom: 1px solid var(--THEME_COLOR_003);
+  > img {
+    width: 15%;
+  }
 `;
 
 export const MenuIconContent = styled.div`
