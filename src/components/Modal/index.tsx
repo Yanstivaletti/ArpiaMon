@@ -1,89 +1,50 @@
-export {}
+import React, { Dispatch, SetStateAction, useState } from 'react';
+import { IoMdClose } from 'react-icons/io';
+import { Api } from '../../Api';
 
-/*import React, { useState, useEffect } from 'react'
-import ReactFrom from 'react-dom'
-import ReactDom from 'react-dom'
+import * as S from './styles'
 
-import './modal.css'
-
-interface ModalProps {
-  isShowing: boolean;
-  toggle: () => void;
+interface ITeste {
+    isShowingModal: boolean;
+    setIsShowModal: Dispatch<SetStateAction<boolean>>;
+    actualPokemon: any;
 }
 
-const Modal: React.FC<ModalProps> = ({ showModal, setShowModal, isShowing, toggle, children }) => { 
-  useEffect(() => {
-    const listner = function (e: KeyboardEvent ) {
-      if (e.key === 'Escape' || e.key === 'Esc' || e.keyCode === 27) {
-        e.preventDefault();
-        e.stopPropagation();
-
-        isShowing && toggle();
-      }
-    }
-
-    window.addEventListener('keyup', listner)
-
-    return (() => {
-      window.removeEventListener('keyup', listner)
-    })
-
-  }, [isShowing, toggle])
-
-  return (
-    isShowing ? ReactDom.createPortal(
-      <div className="modal-overlay">
-        <div className="modal-wrapper">
-          <div className="modal">
-            {children}
-          </div>
-        </div>
-      </div>, document.body
-    ) : null
-  )
-}
-
-interface ModalHeaderProps {
-  toggle: () => void;
-}
-
-export const ModalHeader: React.FC<ModalHeaderProps> = ({ toggle, children }) => (
-    <div className="modal-header">
-        {children || 'Title'}
-    <button 
-            className="modal-button-close" 
-            data-dismiss="modal" 
-            aria-label="Close" 
-        onClick={toggle}
-    >
-      &times;
-    </button>    
-    </div>
-)
-
-export const ModalBody: React.FC = ({ children }) => (
-    <div className="modal-body">
-        {children}
-    </div>
-)
-
-export const ModalFooter: React.FC = ({ children }) => (
-    <div className="modal-footer">
-        {children}
-  </div>
-)
-
-export const useModal = () => {
-  const [isShowing, setIsShowing] = useState(false);
-
-  function toggle() {
-    setIsShowing(!isShowing);
-  }
-
-  return {
-    isShowing,
-    toggle,
-  }
-}
-
-export default Modal;*/
+export const Modal: React.FC<ITeste> = ({ isShowingModal, setIsShowModal, actualPokemon }) => {
+    return (
+    	<>
+    	  <S.ContainerViewPort>
+    	      <S.ContainerModal>
+    	          <S.ContainerIconClose onClick={() => setIsShowModal(!isShowingModal)}>
+    	              <IoMdClose color="#000" size="30px" />
+    	          </S.ContainerIconClose>
+    	              {actualPokemon && (
+    	                  <S.ContainerInfoPokemon>
+    	                      <S.NamePokemon>{actualPokemon.name}</S.NamePokemon>
+    	                      <S.ContainerTypePokemon>
+    	                          {actualPokemon.types.map((element: any, index: number) => {
+    	                              return (
+    	                                  <S.TypePokemon key={index + 1}>{element.type.name}</S.TypePokemon>
+    	                              )
+    	                          })}
+    	                      </S.ContainerTypePokemon>
+    	                      <S.ImagePokemon 
+    	                          src={actualPokemon.sprites.versions['generation-v']['black-white'].animated['front_default']} 
+    	                          alt='GIF do Pokemon' 
+    	                      />
+    	                      <S.ContainerAbilitys>
+															{actualPokemon.abilities.map((element: any, index: number) => {
+																	return (
+																			<S.TypePokemon key={index + 1}>{element.ability.name}</S.TypePokemon>
+																	)
+															})}
+														</S.ContainerAbilitys>
+														<S.IdPokemon>#{actualPokemon.id}</S.IdPokemon>
+    	                  </S.ContainerInfoPokemon>
+    	        )}
+    	          </S.ContainerModal>
+    	    </S.ContainerViewPort>
+        </>
+       
+    )
+};

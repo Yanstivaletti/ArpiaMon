@@ -1,6 +1,8 @@
 import { createGlobalStyle } from "styled-components";
 import '../../fonts/Pokemon Classic.ttf';
+import img from '../../assets/background.jpg';
 export default createGlobalStyle`
+
   * {
     margin: 0;
     padding: 0;
@@ -8,7 +10,8 @@ export default createGlobalStyle`
   }
   html, body, #root {
     height: 100%;
-    background: var(--background);
+    background-size: cover;
+    background-image: url(${img});
   }
   *, button, input {
     border: 0;

@@ -1,67 +1,3 @@
-// import styled from "styled-components";
-
-// export const Container = styled.div`
-
-// .modal-overlay {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     z-index: 1040;
-//     width: 100vw;
-//     height: 100vh;
-//     background-color: rgba(0,0,0,0.5);
-//   }
-  
-//   .modal-wrapper {
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     z-index: 1050;
-//     width: 100%;
-//     height: 100%;
-//     overflow-x: hidden;
-//     overflow-y: auto;
-//     outline: 0;
-//   }
-  
-//   .modal {
-//     z-index: 100;
-//     background: white;
-//     position: relative;
-//     margin:20px auto;
-//     border-radius: 3px;
-//     max-width: 800px;
-//     padding: 8px;
-//     border-radius: 4px;
-//   }
-  
-//   .modal-header {
-//     display: flex;
-//     justify-content: space-between;
-//     border-bottom: 1px solid #ddd;
-//     padding: 8px 0;
-//     font-weight: bold;
-//   }
-  
-//   .modal-button-close {
-//     background: transparent;
-//     border: none;
-//     cursor: pointer;
-//     font-size: 16px;
-//   }
-  
-//   .modal-body {
-//     padding: 8px 0;
-//   }
-  
-//   .modal-footer {
-//     display: flex;
-//     flex-direction: row;
-//     justify-content: flex-end;
-//     padding: 8px 0;  
-//   }
-// `;
-
 import styled from "styled-components"
 
 export const ContainerViewPort = styled.div`
@@ -82,7 +18,7 @@ export const ContainerModal = styled.div`
   min-height: 400px;
   max-width: 600px;
   width: 100%;
-  background-color: #fff;
+  background-color: var(--THEME_COLOR_005);
   position: relative;
   z-index: 1;
   border-radius: 10px;
@@ -116,7 +52,10 @@ export const TypePokemon = styled.span`
   align-self: start;
   padding: 6px 15px;
   border-radius: 10px;
-  background-color: #EFEFEF;
+  background-color: #B8B8B8;
+  border-color: #5A5A5A;
+  border-style: solid;
+  border-width: 2px;
   margin-right: 10px;
 `;
 
@@ -125,6 +64,12 @@ export const ImagePokemon = styled.img`
   width: 200px;
   height: 200px;
   margin-top: 20px;
+  border-radius: 10%; 
+  background-color: #B8B8B8;
+  border-color: #5A5A5A;
+  border-style: solid;
+  border-width: 2px;
+  
 `
 
 export const ContainerAbilitys = styled.div`
@@ -132,8 +77,9 @@ export const ContainerAbilitys = styled.div`
   justify-content: end;
   align-items: center;
   margin-top: 20px;
+
 `;
 
 export const IdPokemon = styled.span`
-  font-size: 12px;
+  font-size: 30px;
 `;

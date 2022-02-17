@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Api } from "../../Api";
 import { delay } from "../../util/Delay/index";
-import { Modal } from '../Modal/teste';
+import { Modal } from "../Modal/index";
 import  Select  from "../Select/index";
 
 import {

@@ -6,9 +6,10 @@ import styled from "styled-components";
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: 1.33fr 1.34fr 1.33fr;
-  grid-template-rows: 56px 3fr;
+  grid-template-rows: 56px 2fr 1.33fr;
   grid-template-areas:
     "SB1 SB2 SB3"
-    "IA1 IA2 IA3";
+    "IA1 IA2 IA3"
+    "FT1 FT2 FT3";
   height: 100%;
 `;

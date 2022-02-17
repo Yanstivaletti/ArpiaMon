@@ -17,7 +17,9 @@ type SearchBarProps = {
 const SearchBar: React.FC<SearchBarProps> = ({searchPokemons, setSearchPokemons}) => {
   return (
     <>
-      <Part01> ArpiaMon </Part01>
+      <Part01> ArpiaMon 
+      <img src = {pokeball}></img>
+      </Part01>
       <Part02>
         <FormArea>
           <SearchIcon />
@@ -31,7 +33,7 @@ const SearchBar: React.FC<SearchBarProps> = ({searchPokemons, setSearchPokemons}
         </FormArea>
       </Part02>
       <Part03>
-      <img src = {pokeball}></img>
+      
       </Part03>
     </>
   );
