@@ -15,7 +15,6 @@ export const Title = styled.div`
   color: var(--items-area-title);
   font-size: 14px;
   padding: 30px 0 15px;
-  }
 `;
 
 export const AboutIcon1 = styled(Award)`
