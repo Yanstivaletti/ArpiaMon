@@ -10,6 +10,7 @@ select {
     margin: 0 0 0 25px;
     padding: 10px;
     width: 110px;
+    
 }
 `;
 
