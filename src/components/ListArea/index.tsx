@@ -89,7 +89,6 @@ const ItemsArea: React.FC<ItemsAreaProps> = ({searchPokemons}) => {
               <ItemDetails>
                 <h3>{data.name}</h3>
                 <ItemDetailsButtonsContent>
-                  <ItemButton type="button" value="See Json" />
                   
                   <ItemButtonDefault 
                     onClick={() => {

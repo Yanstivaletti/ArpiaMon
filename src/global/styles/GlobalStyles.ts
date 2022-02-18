@@ -28,14 +28,15 @@ export default createGlobalStyle`
   
   :root {
     --THEME_COLOR_001: #DC2518;
-    --THEME_COLOR_002: #140707;
-    --THEME_COLOR_003: #FDA0A0;
-    --THEME_COLOR_004: #B8B8B8;
-    --THEME_COLOR_005: #EBEDEF;
-    --THEME_COLOR_006: #FFFFFF;
     --THEME_COLOR_007: #A01E15;
+    --THEME_COLOR_003: #FDA0A0;
+    --THEME_COLOR_006: #FFFFFF;
+    --THEME_COLOR_005: #EBEDEF;
+    --THEME_COLOR_004: #B8B8B8;
     --THEME_COLOR_008: #5A5A5A;
     --THEME_COLOR_009: #002E66;
+    --THEME_COLOR_002: #140707;
+
     --background: var(--THEME_COLOR_009);
     --search-area-background: var(--THEME_COLOR_001);
     --search-area-color: var(--THEME_COLOR_005);
